@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-
-pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
@@ -18,91 +17,63 @@ pageEncoding="UTF-8"%>
 
 <body>
 
+	<h2>
+		<center>Manage Category</center>
+	</h2>
 
+	<hr>
+	<!-- march 10th /manage_category_create -->
+	<form action="manage_category_create" method="post">
 
-<h2><center>Manage Category</center></h2>
+		<input type="text" name="id"> 
+		<input type="text" name="name">
+		<input type="text" name="description"> 
+		<input type="submit" value="Create">
 
-<hr>
+	</form>
 
+	<!--${categoryList}  -->
 
+	<table border="2">
 
-<form action="">
+		<thead>
 
+			<tr>
 
+				<td>Id</td>
 
-<input type ="text" name="id">
+				<td>Name</td>
 
-<input type ="text" name="name">
+				<td>Description</td>
 
-<input type ="text" name="description">
+				<td>Action</td>
 
-<input type ="submit" value ="Create">
+			</tr>
 
+		</thead>
 
+		<c:forEach var="category" items="${categoryList}">
 
+			<tr>
 
+				<td>${category.id}</td>
 
-</form>
+				<td>${category.name}</td>
 
+				<td>${category.description}</td>
 
+				<td><a href="manage_category_edit"> Edit</a> | <a
+					href="manage_category_delete/01"> Delete</a></td>
 
+			</tr>
 
+		</c:forEach>
 
-<!--${categoryList}  -->
+	</table>
 
+	<br>
 
-
-
-
-
-
-<table border="2">
-
-
-
-<thead>
-
-<tr>
-
-<td>Id</td>
-
-<td>Name</td>
-
-<td>Description</td>
-
-<td>Action</td>
-
-
-
-</tr>
-
-</thead>
-
-
-
-<c:forEach var="category" items="${categoryList}">
-
-
-
-<tr>
-
-<td>${category.id}</td>
-
-<td>${category.name}</td>
-
-<td>${category.description}</td>
-
-<td> <a href="/manage_category_edit"> Edit</a>  |  <a href="/manage_category_delete"> Delete</a></td>
-
-</tr>
-
-</c:forEach>
-
-</table>
-
-<br>
-
-<br>
+	<br>
 
 </body>
 

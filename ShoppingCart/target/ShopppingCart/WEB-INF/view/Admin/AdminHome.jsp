@@ -11,11 +11,11 @@
 <body>
 
 <!--  Add 3 Links -->
-<a href="/manage_categories"> Manage Categories</a><br>
+<a href="manage_categories"> Manage Categories</a><br>
 
-<a href="/manage_suppliers"> Manage Suppliers</a><br>
+<a href="manage_suppliers"> Manage Suppliers</a><br>
 
-<a href="/manage_products"> Manage Products</a>
+<a href="manage_products"> Manage Products</a>
 <br>
 <br>
 
